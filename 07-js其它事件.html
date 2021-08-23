@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>软件测试第十一天</title>
+		<style type="text/css">
+			div{width: 200px; height: 50px;margin-left: 256px; border: black 2px solid; background: darkgoldenrod;}
+			/* #hv:hover{background: #FAFAD2;} */
+		</style>
+	</head>
+	<body>
+		<div>single click</div>
+		<div>double-click</div>
+		<div id="hv">鼠标移入展示产品</div>
+		<div>无效果</div>
+		
+		<!-- 需要JS控制的时候再用<script></script>找元素 -->
+		<div>out鼠标移出</div>		
+	</body>
+</html>
+<script type="text/javascript">
+	var div0 = document.getElementsByTagName('div')[0];
+	var div1 = document.getElementsByTagName('div')[1];
+	var div2 = document.getElementsByTagName('div')[2];
+	var div3 = document.getElementsByTagName('div')[3];
+	var div4 = document.getElementsByTagName('div')[4];
+	
+	div0.onclick = function(){
+		alert('单击被捕获');
+	}
+	// ondblclick 双击事件
+	div1.ondblclick = function(){
+		alert('双击被捕获');
+	}
+	// onmouseover / onmouseout 鼠标移入/移出事件，含子元素区域
+	// onmouseenter / onmouseleave 鼠标移入/移出事件，不支持冒泡，不含子元素区域
+	div2.onmouseover = function(){
+		// alert('鼠标移入被捕获');
+		div2.style.background = '#FAFAD2';
+		div2.style.color = '#0055ff';
+	}	
+	div2.onmouseout = function(){
+		alert('您已不在安全范围');
+		div2.style.background = '#B8860B';
+	}
+	div4.onmouseleave = function(){
+		alert('黄牌警告，请离开');
+		div4.style.margin = '280px';
+	}
+	
+</script>

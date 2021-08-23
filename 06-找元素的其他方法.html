@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>软件测试第十天</title>
+	</head>
+	<body>
+		<div class="div1">第一次登录</div><br />
+		<div class="div1" name="ilab">第二次登录</div><br />
+		<div>第三次登录</div><br />
+		<div name="ilab">第四次登录</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var set0_div1 = document.getElementsByClassName('div1')[0];
+	var set1_div1 = document.getElementsByName('ilab')[0];
+	var set_div = document.getElementsByTagName('div')[2];
+	set0_div1.onclick = function(){
+		alert('Failed');
+	}
+	set1_div1.onclick = function(){
+		alert('Failed again');
+	}
+	set_div.onclick = function(){
+		alert("怎么回事？你有问题");
+	}
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>软件测试第十天</title>
+		<style type="text/css">
+			div{font-size: 20px;  width: 200px; height: 200px; background: lightgoldenrodyellow;}
+			input,button{width: 80px; height: 30px;}
+			
+		</style>
+	</head>
+	<body>
+		<div id="div1">公司介绍</div><br />
+		<input type="button" value="变高" id="btn_h" />
+		<input type="button" value="变宽" id="btn_w"/>
+		<input type="button" value="变色" id="btn_c"/>
+		<button type="reset" id="btn_rs">RESET</button><br />
+		<!-- <img src="img/002.jpg" /> -->
+	</body>
+</html>
+<script type="text/javascript">
+
+	//事件三要素：事件源.事件类型=匿名函数里面写的即为待执行的命令
+	var div1 = document.getElementById('div1');
+	var btn_h = document.getElementById('btn_h');
+	var btn_w = document.getElementById('btn_w');
+	var btn_c = document.getElementById('btn_c');
+	var btn_rs = document.getElementById('btn_rs');
+	btn_h.onclick = function(){
+		div1.style.height = '300px';
+	}
+	btn_w.onclick = function(){
+		div1.style.width = '300px';
+	}
+	btn_c.onclick = function(){
+		div1.style.background = 'url(./img/002.jpg)';
+	}
+	btn_rs.onclick = function(){
+		div1.style.height = '200px';
+		div1.style.width = '200px';
+	}
+	
+</script>
