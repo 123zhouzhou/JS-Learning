@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>软件测试第十一天</title>
+		<link rel="stylesheet" type="text/css" href="08-css3.css" />
+		<script type="text/javascript">
+			
+			// window.onload | 当页面所有html内容都加载完毕后才执行此处的代码
+			window.onload = function(){
+				var div = document.getElementsByTagName('div')[0];
+				div.onmouseout = function(){
+					div.style.height = '200px';
+				}
+			}			
+		</script>
+	</head>
+	<body>
+		<div>
+			<i>半斤八两网</i>
+			<span>
+				<form action="" method="post">
+					<input type="radio" name="login" class="lg_t" id="on" value="fd" /><label for="on">登录</label>
+					<input type="radio" name="login" class="lg_f" id="off"/><label for="off">不登</label>
+				</form>				
+			</span>
+		</div>
+		<div onclick="alert('I am coming!')">
+			<form action="" method="post">
+				<input type="button" value="点我呀" class="down" />
+			</form>			
+		</div>
+	</body>
+</html>
+
+<!-- 外链式.js -->
+<script type="text/javascript" src="08-js.js"></script>
