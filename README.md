@@ -1,2 +1,2 @@
 # JS-Learning
-Learnt JavaScript on bilibili
+## Learnt JavaScript on bilibili
