@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<title>软件测试第十一天</title>
 		<link rel="stylesheet" type="text/css" href="08-css3.css" />
+		<style type="text/css">
+			.hideVideo{position: absolute; display: none;}
+		</style>
 	</head>
 	<body>
 		<div>
@@ -15,22 +18,44 @@
 				</form>				
 			</span>
 		</div>
-		<div onclick="alert('I am coming!')">
+		<div>
 			<form action="" method="post">
-				<input type="button" value="点我呀" class="down" />
+				<input type="button" value="了解我" class="down" id="btn_v" />
+				<input type="button" value="购买" class="down"  onclick="alert('月销+1~我们将竭诚为您服务')" />
 			</form>			
+		</div>
+		<div class="hideVideo" id="div1">
+			<video width="800" height="" controls="controls" id="video1">
+				<source src="video/bro.mp4" type="video/mp4"></source>
+				<source src="video/bro.mp4" type="video/ogg"></source>
+				<source src="video/bro.mp4" type="video/webm"></source>
+				<object width="" height="" type="application/x-shockwave-flash" data="bro.swf">
+					<param name="movie" value="bro.swf" />
+					<param name="flashvars" value="autostart=true&amp;file=bro.swf" />
+				</object>
+				当前浏览器不支持 video直接播放，点击这里下载视频： <a href="./video/bro.mp4">下载视频</a>
+			</video>
 		</div>
 	</body>
 </html>
 
 <!-- 外链式.js -->
-<script type="text/javascript" src="08-js.js"></script>
+<script src="08-js.js"></script>
 
 <!-- 内嵌式js -->
-<script type="text/javascript">
+<script>
 	var div = document.getElementsByTagName('div')[0];
 	div.onmouseout = function(){
 		div.style.height = '200px';
+	}
+	
+	var btn_v = document.getElementsByTagName('input')[2];
+	var video1 = document.getElementById('video1');
+	var div1 = document.getElementById('div1');
+	
+	btn_v.onclick = function(){
+		div1.src = 'video/bro.mp4';
+		div1.show();
 	}
 </script>
 
